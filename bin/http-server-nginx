@@ -2,4 +2,16 @@
 
 const run = require('../index');
 
-run();
+let path = require('path');
+let program = require('commander');
+let package = require('../package.json');
+
+
+program
+    .version(package.version)
+    .option('-p, --port <n>', 'forward port')
+    .option('-d, --dist <n>', 'dist path')
+    .parse(process.argv);
+
+
+run(program.port, program.dist);
