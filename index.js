@@ -7,7 +7,7 @@ const cwd = process.cwd();
 
 
 
-module.exports = function (port = 80, dist = './dist') {
+module.exports = function (port = 80, dist = './dist', forwardPort = 7001) {
     const app = express();
 
     app.use(bodyParser.json({ type: 'application/json' }))
@@ -15,7 +15,7 @@ module.exports = function (port = 80, dist = './dist') {
 
 
     app.use(proxy(['**', '**/*.htm', '**/*.do', '**/*.json', '**/*.jsp'], {
-        target: 'http://localhost:8001',
+        target: 'http://localhost:' + forwardPort,
         changeOrigin: false
     }));
 

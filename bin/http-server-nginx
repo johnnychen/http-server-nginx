@@ -9,9 +9,10 @@ let package = require('../package.json');
 
 program
     .version(package.version)
-    .option('-p, --port <n>', 'forward port')
+    .option('-p, --port <n>', 'nginx port')
     .option('-d, --dist <n>', 'dist path')
+    .option('-f, --forward-port <n>', 'forward port')
     .parse(process.argv);
 
 
-run(program.port, program.dist);
+run(program.port, program.dist, program.forwardPort);
