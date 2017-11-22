@@ -1,0 +1,30 @@
+{
+  "name": "http-server-nginx",
+  "version": "1.0.0",
+  "description": "http-server-nginx for hold static files and forward others",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "http-server-nginx": "./bin/http-server-nginx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnychen/http-server-nginx.git"
+  },
+  "keywords": [
+    "http-server-nginx"
+  ],
+  "author": "johnnychen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnychen/http-server-nginx/issues"
+  },
+  "homepage": "https://github.com/johnnychen/http-server-nginx#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.17.4"
+  }
+}
